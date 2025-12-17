@@ -14,10 +14,19 @@ if (!$koneksi) {
         if ($koneksi && file_exists(__DIR__ . '/create_db.sql')) {
             $sql = file_get_contents(__DIR__ . '/create_db.sql');
             if ($sql !== false) {
-                if (mysqli_multi_query($koneksi, $sql)) {
+                // Try executing as multi-query first; if some statements fail (platform differences),
+                // fall back to executing statements individually and ignore non-critical errors.
+                if (!mysqli_multi_query($koneksi, $sql)) {
+                    $stmts = array_filter(array_map('trim', preg_split('/;\s*\n/', $sql)));
+                    foreach ($stmts as $stmt) {
+                        if ($stmt === '') continue;
+                        @mysqli_query($koneksi, $stmt);
+                    }
+                } else {
+                    // flush multi_query results
                     do { } while (mysqli_more_results($koneksi) && mysqli_next_result($koneksi));
-                    mysqli_select_db($koneksi, $db);
                 }
+                mysqli_select_db($koneksi, $db);
             }
         }
     }
