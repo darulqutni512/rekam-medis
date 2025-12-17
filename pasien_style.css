@@ -1,0 +1,179 @@
+@import url('style.css');
+/* ======== Reset & Umum ======== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #eef3f7;
+  color: #333;
+}
+
+/* ======== Header ======== */
+.header {
+  background-color: #0066cc;
+  color: white;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header h1 {
+  font-size: 22px;
+}
+
+.header nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.header nav a:hover {
+  text-decoration: underline;
+}
+
+/* ======== Container ======== */
+.container {
+  max-width: 1100px;
+  margin: 40px auto;
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #0066cc;
+}
+
+/* ======== Tombol ======== */
+.btn {
+  display: inline-block;
+  background-color: #0066cc;
+  color: white;
+  padding: 8px 14px;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background-color: #004c99;
+}
+
+.btn-danger {
+  background-color: #cc0000;
+}
+
+.btn-danger:hover {
+  background-color: #990000;
+}
+
+.btn-warning {
+  background-color: #ffcc00;
+  color: black;
+}
+
+.btn-warning:hover {
+  background-color: #e6b800;
+}
+
+/* ======== Tabel ======== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+th, td {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+th {
+  background-color: #0066cc;
+  color: white;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f6fa;
+}
+
+tr:hover {
+  background-color: #e8f0fe;
+}
+
+/* ======== Footer ======== */
+footer {
+  text-align: center;
+  padding: 15px;
+  margin-top: 40px;
+  color: #555;
+}
+
+
+.form-box label {
+    display: block;
+    margin-top: 15px;
+    font-weight: 600;
+    color: #007da6;
+}
+
+.form-box input, 
+.form-box select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    margin-top: 5px;
+    font-size: 15px;
+}
+
+.form-box button {
+    margin-top: 20px;
+    background-color: #33cc99;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.form-box button:hover {
+    background-color: #29a67d;
+}
+
+.btn-secondary {
+    background-color: #ccc;
+    color: #333;
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+.btn-secondary:hover {
+    background-color: #aaa;
+}
+
+/* ========== FOOTER ========== */
+footer {
+    text-align: center;
+    background-color: #007da6;
+    color: white;
+    padding: 15px;
+    margin-top: 40px;
+    border-top: 4px solid #33ccff;
+    font-size: 14px;
+}

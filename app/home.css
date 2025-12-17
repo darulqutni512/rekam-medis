@@ -1,0 +1,27 @@
+/* Polished homepage styles: improved spacing, typography, and responsive behavior */
+.home-hero{display:flex;align-items:center;justify-content:space-between;gap:28px;padding:6px}
+.home-hero .left{flex:1}
+.home-hero h2{margin:0 0 6px 0;font-size:24px}
+.home-hero p{margin:0;color:#556}
+.home-hero .right img{width:320px;max-width:40%;border-radius:12px;box-shadow:0 14px 40px rgba(0,0,0,0.08)}
+.stat-card{background:#fff;padding:16px;border-radius:12px;box-shadow:0 10px 30px rgba(0,0,0,0.06);min-width:120px;transition:transform .22s cubic-bezier(.2,.9,.2,1),box-shadow .22s}
+.stat-card:hover{transform:translateY(-8px);box-shadow:0 26px 60px rgba(0,0,0,0.10)}
+.stat-number{font-size:36px;color:#0077b6;font-weight:800;line-height:1}
+.quick-actions{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:12px;margin-top:18px;align-items:stretch}
+.quick-actions .action{background:linear-gradient(180deg,#0077b6,#00b4d8);border-radius:12px;padding:12px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;text-decoration:none;color:white;box-shadow:0 8px 26px rgba(0,0,0,0.06);transition:transform .12s ease,box-shadow .12s ease;border:1px solid rgba(255,255,255,0.06)}
+.quick-actions .action:before{content:'';position:absolute;pointer-events:none;border-radius:12px;left:0;top:0;right:0;bottom:0;background:linear-gradient(180deg,rgba(255,255,255,0.03),rgba(255,255,255,0));}
+.quick-actions .action{position:relative}
+.quick-actions .action:hover{transform:translateY(-8px);box-shadow:0 22px 48px rgba(0,0,0,0.12)}
+.quick-actions .action .icon{width:36px;height:36px;opacity:1;color:white}
+.quick-actions .action .label{font-weight:700;font-size:14px;color:white}
+.quick-actions .action .muted{font-size:12px;color:rgba(255,255,255,0.9)}
+.recent-list{display:flex;gap:16px;flex-wrap:wrap}
+.recent-card{flex:1;min-width:260px;background:linear-gradient(180deg,#ffffff,#fbfdff);padding:14px;border-radius:12px;box-shadow:0 10px 30px rgba(0,0,0,0.06)}
+.kpi-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:14px;align-items:center}
+.time-now{color:#444;margin-top:6px;font-weight:600}
+.recent-card ul{list-style:none;padding:0;margin:0}
+.recent-card li{padding:10px 8px;border-bottom:1px solid #eef4f8}
+.recent-card li:last-child{border-bottom:none}
+.donut{display:block;margin:auto}
+.small-muted{font-size:13px;color:#667}
+@media (max-width:900px){.home-hero{flex-direction:column-reverse}.home-hero .right img{max-width:260px}.kpi-row{justify-content:space-between}}

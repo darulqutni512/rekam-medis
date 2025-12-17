@@ -1,0 +1,587 @@
+/* --- Reset dan dasar --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f9ff;
+    color: #333;
+}
+
+/* --- Header & Navbar --- */
+header {
+    background-color: #0077b6;
+    color: white;
+    padding: 15px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+header .logo {
+    display: flex;
+    align-items: center;
+}
+header .logo img {
+    width: 50px;
+    margin-right: 10px;
+}
+header h1 {
+    font-size: 22px;
+    letter-spacing: 1px;
+}
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+nav a:hover, nav a.active {
+    color: #caf0f8;
+}
+
+/* --- Hero Section --- */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 80px 60px;
+    background: linear-gradient(to right, #90e0ef, #caf0f8);
+}
+.hero-text {
+    max-width: 50%;
+}
+.hero-text h2 {
+    font-size: 32px;
+    color: #023e8a;
+}
+.hero-text p {
+    margin: 15px 0;
+    font-size: 16px;
+}
+.hero-text .btn {
+    display: inline-block;
+    background-color: #0077b6;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+.hero-text .btn:hover {
+    background-color: #023e8a;
+}
+.hero-image img {
+    width: 300px;
+}
+
+/* --- Menu Section --- */
+.menu {
+    text-align: center;
+    padding: 60px 30px;
+}
+.menu h2 {
+    color: #0077b6;
+    margin-bottom: 40px;
+}
+.card-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+.card {
+    background-color: white;
+    width: 260px;
+    padding: 25px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+.card img {
+    width: 80px;
+    margin-bottom: 15px;
+}
+.card h3 {
+    color: #0077b6;
+    margin-bottom: 10px;
+}
+.card p {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 15px;
+}
+.card .btn {
+    background-color: #0077b6;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 8px;
+    text-decoration: none;
+}
+.card .btn:hover {
+    background-color: #023e8a;
+}
+
+/* --- Footer --- */
+footer {
+    text-align: center;
+    background-color: #0077b6;
+    color: white;
+    padding: 15px;
+    margin-top: 50px;
+}
+
+.form-box {
+    background: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    max-width: 500px;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-box input, 
+.form-box select, 
+.form-box textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    width: 100%;
+}
+
+.btn {
+    background-color: #0077b6;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: #023e8a;
+}
+
+.btn-secondary {
+    background-color: #adb5bd;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    padding: 10px;
+    border-radius: 8px;
+    display: inline-block;
+}
+
+.btn-secondary:hover {
+    background-color: #6c757d;
+}
+
+.header {
+    background: linear-gradient(90deg, #0077b6, #00b4d8);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 0 0 20px 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 28px;
+}
+
+.header nav {
+    margin-top: 10px;
+}
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #fff;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.data-table th {
+    background-color: #0077b6;
+    color: white;
+    padding: 12px;
+    text-align: left;
+}
+
+.data-table td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    vertical-align: middle;
+}
+
+.data-table tr:hover {
+    background-color: #e9f5ff;
+}
+
+/* make table responsive */
+#pasienTable td { max-width: 220px; }
+#pasienTable td:nth-child(7) { max-width: 260px; }
+
+/* small tweaks for aksi buttons */
+.aksi-btn a { margin-left: 6px; }
+
+.btn-small {
+    background-color: #00b4d8;
+    color: white;
+    padding: 6px 10px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.btn-small:hover {
+    background-color: #0096c7;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    color: white;
+    padding: 6px 10px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.btn-danger:hover {
+    background-color: #b02a37;
+}
+
+/* ========== GENERAL STYLE ========== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #f5fbff;
+    color: #333;
+}
+
+/* ========== HEADER & NAVBAR ========== */
+.header {
+    background: linear-gradient(90deg, #0099cc, #33ccff);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+}
+
+.header h1 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+nav {
+    margin-top: 10px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* ========== CONTAINER ========== */
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 30px auto;
+}
+
+/* ========== BUTTONS ========== */
+/* Unified button styles for consistent, non-distorted appearance */
+button, input[type="submit"], a.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background-color: #0099cc;
+    color: #fff;
+    padding: 10px 18px;
+    min-height: 40px;
+    line-height: 1;
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.2s ease, transform 0.08s ease;
+}
+
+button:focus, input[type="submit"]:focus, a.btn:focus {
+    outline: 2px solid rgba(0,0,0,0.06);
+}
+
+button:hover, input[type="submit"]:hover, a.btn:hover {
+    background-color: #007da6;
+}
+
+/* Variants keep original colors but follow unified sizing */
+.btn-small {
+    padding: 6px 12px;
+    min-height: 34px;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+.btn-danger {
+    background-color: #ff6666;
+}
+.btn-danger:hover { background-color: #e04e4e; }
+
+.btn-secondary {
+    background-color: #adb5bd;
+    color: white;
+}
+.btn-secondary:hover { background-color: #6c757d; }
+
+/* Backwards-compatible helpers and variants */
+.btn-kembali, .btn-cancel { /* older pages using these classes */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #adb5bd;
+    color: white;
+    padding: 10px 18px;
+    border-radius: 8px;
+    text-decoration: none;
+}
+
+.btn-warning {
+    background-color: #ffcc00;
+    color: #222;
+    padding: 8px 14px;
+    border-radius: 8px;
+}
+
+/* Consistent spacing for action groups */
+.actions, .aksi-btn {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+/* Ensure card-contained buttons align nicely */
+.card .btn, .card a.btn, .card button {
+    margin-right: 8px;
+}
+
+/* Small utility to right-align action buttons inside card */
+.card .actions { justify-content: flex-end; margin-top: 12px; }
+
+/* ========== CARD & TABLE ========== */
+.card {
+    background-color: white;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+.card h2 {
+    color: #007da6;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    text-align: center;
+}
+
+.data-table th {
+    background-color: #0099cc;
+    color: white;
+    padding: 10px;
+    border-radius: 5px 5px 0 0;
+}
+
+.data-table td {
+    background-color: #f8f9fa;
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+}
+
+.data-table tr:hover td {
+    background-color: #e7f6ff;
+}
+
+/* ========== FORM STYLE ========== */
+.form-box {
+    background-color: white;
+    width: 60%;
+    margin: 40px auto;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.form-box label {
+    display: block;
+    margin-top: 15px;
+    font-weight: 600;
+    color: #007da6;
+}
+
+.form-box input, 
+.form-box select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    margin-top: 5px;
+    font-size: 15px;
+}
+
+.form-box button {
+    margin-top: 20px;
+    background-color: #33cc99;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.form-box button:hover {
+    background-color: #29a67d;
+}
+
+.btn-secondary {
+    background-color: #ccc;
+    color: #333;
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+.btn-secondary:hover {
+    background-color: #aaa;
+}
+
+/* ========== FOOTER ========== */
+footer {
+    text-align: center;
+    background-color: #007da6;
+    color: white;
+    padding: 15px;
+    margin-top: 40px;
+    border-top: 4px solid #33ccff;
+    font-size: 14px;
+}
+
+/* ======= Global overrides to ensure consistent layout across pages ======= */
+
+/* Helper classes for pages that previously used inline styles */
+.center-form { max-width: 480px; margin: 40px auto; }
+.center-form input { width: 100%; padding: 10px; border-radius: 8px; border: 1px solid #d0d7dd; }
+.center-form label { display: block; margin-top: 10px; font-weight: 600; }
+
+.rekam-box { max-width: 900px; margin: 30px auto; }
+.rekam-box input, .rekam-box textarea { width: 100%; padding: 8px; border-radius: 8px; border: 1px solid #ccc; }
+.rekam-actions { margin-top: 12px; }
+
+/* Follow styling from Beranda: centered container and consistent card widths */
+.container {
+    width: 95%;
+    max-width: 1100px;
+    margin: 30px auto;
+}
+
+/* Cards inside the main container should expand to available width for listings */
+.container .card {
+    max-width: 1100px;
+    width: 100%;
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+/* Ensure main listing cards have proper inner layout */
+.container > .card {
+    padding: 20px 24px;
+}
+
+/* Align action buttons to the right in table header area */
+.search-bar { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-bottom: 18px; }
+.search-bar input { max-width: 320px; width: 100%; }
+
+/* Make tables look consistent */
+table { width: 100%; border-collapse: collapse; }
+thead th { background-color: #0077b6; color: white; padding: 12px; text-align: left; }
+tbody td { padding: 10px; border-bottom: 1px solid #e9f5ff; vertical-align: top; }
+
+/* small screens */
+@media (max-width: 800px) {
+    .card { padding: 16px; }
+    .search-bar { flex-direction: column; align-items: stretch; }
+    .aksi-btn { justify-content: flex-start; }
+}
+
+/* Table inside cards: prevent layout break and wrap long content */
+.card .data-table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed; /* evenly distribute columns */
+}
+.card .data-table th,
+.card .data-table td {
+    word-wrap: break-word;
+    white-space: normal;
+    text-align: left;
+    padding: 10px;
+}
+.card .data-table td:last-child { text-align: center; }
+
+/* Small screens: allow horizontal scroll for wide tables */
+@media (max-width: 800px) {
+    .card .data-table { display: block; overflow-x: auto; }
+}
+
+/* Utilities & responsive additions for consistent layout */
+.flex{display:flex;align-items:center;gap:12px}
+.space-between{justify-content:space-between}
+.vcenter{align-items:center}
+.center{display:flex;justify-content:center;align-items:center}
+.mt-12{margin-top:12px}
+.mb-12{margin-bottom:12px}
+.no-margin{margin:0}
+.input-search{padding:8px;border-radius:8px;border:1px solid #dfe7ee}
+.input-search.wide{min-width:220px}
+@media (max-width:900px){.form-row{flex-direction:column}.header h1{font-size:18px}.card{padding:14px}}
+
