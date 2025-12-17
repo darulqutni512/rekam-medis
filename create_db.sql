@@ -42,6 +42,16 @@ CREATE TABLE IF NOT EXISTS `rekam_medis` (
   CONSTRAINT `fk_rekam_dokter` FOREIGN KEY (`id_dokter`) REFERENCES `dokter`(`id_dokter`) ON DELETE SET NULL ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+-- Table: obat (medicines)
+CREATE TABLE IF NOT EXISTS `obat` (
+  `id_obat` INT UNSIGNED NOT NULL AUTO_INCREMENT,
+  `nama_obat` VARCHAR(255) NOT NULL,
+  `stok` INT DEFAULT 0,
+  `satuan` VARCHAR(50) DEFAULT 'pcs',
+  `keterangan` TEXT,
+  PRIMARY KEY (`id_obat`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
 -- Pivot table: rekam_obat (relation between rekam_medis and obat)
 CREATE TABLE IF NOT EXISTS `rekam_obat` (
   `id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
@@ -80,16 +90,6 @@ CREATE TABLE IF NOT EXISTS `appointment` (
   KEY `idx_appointment_dokter` (`id_dokter`),
   CONSTRAINT `fk_appointment_pasien` FOREIGN KEY (`id_pasien`) REFERENCES `pasien`(`id_pasien`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `fk_appointment_dokter` FOREIGN KEY (`id_dokter`) REFERENCES `dokter`(`id_dokter`) ON DELETE SET NULL ON UPDATE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
--- Table: obat (medicines)
-CREATE TABLE IF NOT EXISTS `obat` (
-  `id_obat` INT UNSIGNED NOT NULL AUTO_INCREMENT,
-  `nama_obat` VARCHAR(255) NOT NULL,
-  `stok` INT DEFAULT 0,
-  `satuan` VARCHAR(50) DEFAULT 'pcs',
-  `keterangan` TEXT,
-  PRIMARY KEY (`id_obat`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- End of schema

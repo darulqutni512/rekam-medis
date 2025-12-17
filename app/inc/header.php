@@ -8,13 +8,13 @@
       <h1 class="no-margin">Sistem Rekam Medis</h1>
     </div>
     <nav>
-      <a href="/app/">Beranda</a>
-      <a href="/app/dokter.php">Dokter</a>
-      <a href="/app/pasien.php">Pasien</a>
-      <a href="/app/rekam_medis.php">Rekam Medis</a>
-      <a href="/app/appointment.php">Janji</a>
-      <a href="/app/obat.php">Obat</a>
-      <a href="/app/users.php">Users</a>
+      <a href="./">Beranda</a>
+      <a href="dokter.php">Dokter</a>
+      <a href="pasien.php">Pasien</a>
+      <a href="rekam_medis.php">Rekam Medis</a>
+      <a href="appointment.php">Janji</a>
+      <a href="obat.php">Obat</a>
+      <a href="users.php">Users</a>
     </nav>
   </div>
 </header>
