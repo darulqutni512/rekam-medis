@@ -14,7 +14,7 @@
       <a href="rekam_medis.php">Rekam Medis</a>
       <a href="appointment.php">Janji</a>
       <a href="obat.php">Obat</a>
-      <a href="users.php">Users</a>
+      <a href="rekam_obat.php">Rekam Obat</a>
     </nav>
   </div>
 </header>

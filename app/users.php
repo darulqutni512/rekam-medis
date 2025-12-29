@@ -1,8 +1,8 @@
 <?php
 require_once __DIR__ . '/inc/db.php';
-$users = [];
-$res = mysqli_query($koneksi, "SELECT id_user, username, nama, email, role FROM users ORDER BY id_user DESC");
-if ($res) while ($r = mysqli_fetch_assoc($res)) $users[] = $r;
+// Halaman users telah dihapus; redirect ke beranda
+header("Location: ./");
+exit;
 ?>
 <!DOCTYPE html>
 <html lang="id"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Users - Rekam Medis (Rebuild)</title>
